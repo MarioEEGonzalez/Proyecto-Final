@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>501</width>
+    <height>502</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,25 +17,14 @@
    <widget class="QGraphicsView" name="graphicsView">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>30</y>
-      <width>421</width>
-      <height>261</height>
+      <x>0</x>
+      <y>0</y>
+      <width>501</width>
+      <height>501</height>
      </rect>
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>21</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
