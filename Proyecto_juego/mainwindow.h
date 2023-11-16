@@ -32,6 +32,7 @@ private:
     QGraphicsPixmapItem *level1;
     main_character *pers;
     ammunition *bala;
+    QString dir;
 
 };
 

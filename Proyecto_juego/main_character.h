@@ -2,6 +2,7 @@
 #define MAIN_CHARACTER_H
 #include"character.h"
 
+
 class main_character : public character
 {
 public:
@@ -9,6 +10,9 @@ public:
     QPixmap player;
     main_character(QString name);
     void moveup();
+    void moveleft();
+    void moveright();
+    void movedown();
 
 };
 

@@ -11,5 +11,10 @@
         <file>rick_up3.png</file>
         <file>rick1.png</file>
         <file>rick2.png</file>
+        <file>rick_left1.png</file>
+        <file>rick_left2.png</file>
+        <file>rick_left3.png</file>
+        <file>rick_left4.png</file>
+        <file>rick3.png</file>
     </qresource>
 </RCC>

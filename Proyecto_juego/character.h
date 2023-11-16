@@ -5,6 +5,7 @@
 #include <QGraphicsPixmapItem>
 #include <QString>
 #include <QPixmap>
+#include <QTransform>
 
 
 class character: public QObject, public QGraphicsPixmapItem
