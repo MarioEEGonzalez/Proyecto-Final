@@ -16,5 +16,14 @@
         <file>rick_left3.png</file>
         <file>rick_left4.png</file>
         <file>rick3.png</file>
+        <file>morty_down1.png</file>
+        <file>morty_down2.png</file>
+        <file>morty_down3.png</file>
+        <file>morty_left1.png</file>
+        <file>morty_left2.png</file>
+        <file>morty_left3.png</file>
+        <file>morty_up1.png</file>
+        <file>morty_up2.png</file>
+        <file>morty_up3.png</file>
     </qresource>
 </RCC>

@@ -8,11 +8,12 @@ class main_character : public character
 public:
 
     QPixmap player;
-    main_character(QString name);
+    main_character(QString name, int tipo1);
     void moveup();
     void moveleft();
     void moveright();
     void movedown();
+    int tipo;
 
 };
 

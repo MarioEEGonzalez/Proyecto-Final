@@ -16,13 +16,13 @@ MainWindow::MainWindow(QWidget *parent)
     scene1->setSceneRect(0,0,(ui->graphicsView->width() - 2)/sc_factor,(ui->graphicsView->height() - 2)/sc_factor); //
     ui->graphicsView->scale(sc_factor,sc_factor);
 
-    int char_num = 1;
+    int char_num = 0;
 
     if(char_num ==1)
     {
-    pers = new main_character(":/new/prefix1/rick1.png");}//rick
-    else if(char_num == 2){
-    pers = new main_character("D:/MIO/UNIVERSIDAD/Informatica 2/Proyecto-Final/sprites/morty.png");//morty
+    pers = new main_character(":/new/prefix1/rick1.png",char_num);}//rick
+    else if(char_num == 0){
+    pers = new main_character(":/new/prefix1/morty_down1.png",char_num);//morty
 
     }
     scene1->addItem(pers);
