@@ -1,15 +1,23 @@
 #include "main_character.h"
 
 
-main_character::main_character(QString name,int tipo1)
+main_character::main_character(int tipo1)
 {
+    tipo=tipo1;
+    if (tipo == 1){
+        setPixmap (QPixmap(":/new/prefix1/rick1.png").scaled(50,50));
+    }
+    if (tipo == 0){
+        setPixmap (QPixmap(":/new/prefix1/morty_down1.png").scaled(50,50));
+    }
 
-    setPixmap (QPixmap(name).scaled(50,50));
+
     posx= 250;
     posy = 250;
     setPos(posx,posy);
+    setHealth(100);
     speed = 2;
-    tipo=tipo1;
+
 
 }
 

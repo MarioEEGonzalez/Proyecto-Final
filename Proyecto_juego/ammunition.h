@@ -19,6 +19,8 @@ public:
     QTimer *timer;
     QPixmap *balita;
     QString dir1;
+    float Vo,A,T,k;
+    unsigned int n;
 public slots:
     void moveup();
 

@@ -6,6 +6,7 @@
 #include <QGraphicsScene>
 #include <QGraphicsPixmapItem>
 #include "character.h"
+#include "enemy.h"
 #include "main_character.h"
 #include "ammunition.h"
 #include <QKeyEvent>
@@ -31,6 +32,7 @@ private:
     QGraphicsScene *scene1;
     QGraphicsPixmapItem *level1;
     main_character *pers;
+    enemy *enemy1;
     ammunition *bala;
     QString dir;
 

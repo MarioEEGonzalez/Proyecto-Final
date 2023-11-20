@@ -11,6 +11,7 @@ CONFIG += c++17
 SOURCES += \
     ammunition.cpp \
     character.cpp \
+    enemy.cpp \
     main.cpp \
     main_character.cpp \
     mainwindow.cpp
@@ -18,6 +19,7 @@ SOURCES += \
 HEADERS += \
     ammunition.h \
     character.h \
+    enemy.h \
     main_character.h \
     mainwindow.h
 

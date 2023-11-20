@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>D:/MIO/UNIVERSIDAD/Informatica 2/Proyecto-Final/sprites/FONDO1.png</file>
+        <file>D:/MIO/UNIVERSIDAD/Informatica 2/Proyecto-Final/sprites/morty.png</file>
+        <file>D:/MIO/UNIVERSIDAD/Informatica 2/Proyecto-Final/sprites/rick.png</file>
+        <file>D:/MIO/UNIVERSIDAD/Informatica 2/Proyecto-Final/sprites/rick1.png</file>
+        <file>D:/MIO/UNIVERSIDAD/Informatica 2/Proyecto-Final/sprites/rick2.png</file>
+        <file>D:/MIO/UNIVERSIDAD/Informatica 2/Proyecto-Final/sprites/rick_up1.png</file>
+        <file>D:/MIO/UNIVERSIDAD/Informatica 2/Proyecto-Final/sprites/rick_up2.png</file>
+        <file>D:/MIO/UNIVERSIDAD/Informatica 2/Proyecto-Final/sprites/rick_up3.png</file>
+        <file>D:/MIO/UNIVERSIDAD/Informatica 2/Proyecto-Final/sprites/49.png</file>
+        <file>D:/MIO/UNIVERSIDAD/Informatica 2/Proyecto-Final/sprites/50.png</file>
+        <file>D:/MIO/UNIVERSIDAD/Informatica 2/Proyecto-Final/sprites/48.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,10 @@
+debug/ammunition.o
+debug/character.o
+debug/enemy.o
+debug/main.o
+debug/main_character.o
+debug/mainwindow.o
+debug/qrc_sprites.o
+debug/moc_ammunition.o
+debug/moc_enemy.o
+debug/moc_mainwindow.o

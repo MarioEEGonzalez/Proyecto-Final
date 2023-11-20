@@ -1,0 +1,10 @@
+release/ammunition.o
+release/character.o
+release/enemy.o
+release/main.o
+release/main_character.o
+release/mainwindow.o
+release/qrc_sprites.o
+release/moc_ammunition.o
+release/moc_enemy.o
+release/moc_mainwindow.o
