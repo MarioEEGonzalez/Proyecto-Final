@@ -26,6 +26,9 @@ public:
     void setLevel1();
     void keyPressEvent(QKeyEvent *e);
     QTimer *time_bala;
+
+
+    QList <ammunition*> balas;
 private:
     Ui::MainWindow *ui;
 

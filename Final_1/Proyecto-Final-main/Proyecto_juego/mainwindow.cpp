@@ -44,12 +44,22 @@ void MainWindow::keyPressEvent(QKeyEvent *e){
     {
     bala= new ammunition(":/new/prefix1/48.png",pers->pos().x(),pers->pos().y(),dir);
     scene1->addItem(bala);
-    if (bala->pos().x()>500 || bala->pos().x()<0 || bala->pos().y()>500|| bala->pos().y()<0){
-        delete bala;
+    balas.append(bala);
+
+    for (int i = 0; i<balas.length();i++ ){
+        if (balas.at(i)->posx >= enemy1->posx && balas.at(i)->posx< enemy1->posx +60 &&balas.at(i)->posy>= enemy1->posy && balas.at(i)->posy< enemy1->posy +60 ){
+
+            enemy1->setPixmap (QPixmap(":/new/prefix1/morty_down1.png").scaled(50,50));
+        }
     }
 
-
     }
+    //QObject::connect(bala,SIGNAL(colision()),enemy1,SLOT(dead()));
+
+
+
+
+
     if (e->key()==Qt::Key_A && pers->pos().x() >= 0 )
     {
 

@@ -2,28 +2,34 @@
 
 enemy::enemy(int tipo1)
 {
+    timer = new QTimer(this);
+    timer->start(50);
+    speed= 3;
     tipo=tipo1;
     if (tipo == 1){
         setPixmap (QPixmap(":/new/prefix1/tammy_down1.png").scaled(60,60));
+        setHealth(100);
+        posx= 260;
+        posy = 20;
+        speedx = 2* speed;
+        speedy = 1*speed;
+        //Detect_colision( );
+        connect(timer,SIGNAL(timeout()),this,SLOT(movetammy()));
     }
     if (tipo == 0){
         setPixmap (QPixmap(":/new/prefix1/morty_down1.png").scaled(50,50));
     }
 
 
-    posx= 260;
-    posy = 20;
-    setPos(posx,posy);
-    setHealth(100);
-    speedx = 10;
-    speedy = 8;
 
-    timer = new QTimer(this);
-    timer->start(70);
-    connect(timer,SIGNAL(timeout()),this,SLOT(movetammy()));
+    setPos(posx,posy);
+
+
+
 
 }
 void enemy::movetammy(){
+
 
     posx +=speedx;
     posy += speedy;
@@ -38,5 +44,18 @@ void enemy::movetammy(){
     if (posy <= 0 || posy >= 450) {
         speedy = -speedy; // Invertir la velocidad en Y en caso de colisión
     }
+
+}
+
+float enemy::getx(){
+    return posx;
+}
+
+void enemy::dead(){
+    setPixmap (QPixmap(":/new/prefix1/morty.png").scaled(60,60));
+}
+
+void enemy::Detect_colision( ){
+
 
 }

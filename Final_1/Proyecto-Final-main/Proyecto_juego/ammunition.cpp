@@ -86,3 +86,4 @@ void ammunition::moveup(){
         n++;
     }
 }
+
