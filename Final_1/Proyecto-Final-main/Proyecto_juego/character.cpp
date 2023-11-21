@@ -18,3 +18,4 @@ int character::getSpeed(){
 void character::setSpeed(int cant){
     speed = cant;
 }
+

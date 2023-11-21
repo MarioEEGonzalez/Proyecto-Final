@@ -25,6 +25,11 @@ public:
     unsigned int n;
     void detect_colision();
 
+    int height;
+    int width;
+
+    QRectF boundingRect() const;
+
 
 public slots:
     void moveup();

@@ -7,7 +7,9 @@ enemy::enemy(int tipo1)
     speed= 3;
     tipo=tipo1;
     if (tipo == 1){
-        setPixmap (QPixmap(":/new/prefix1/tammy_down1.png").scaled(60,60));
+        width = 60;
+        height = 60;
+        setPixmap (QPixmap(":/new/prefix1/tammy_down1.png").scaled(width,height));
         setHealth(100);
         posx= 260;
         posy = 20;
@@ -58,4 +60,9 @@ void enemy::dead(){
 void enemy::Detect_colision( ){
 
 
+}
+
+QRectF enemy::boundingRect() const
+{
+    return QRectF(-width/2, -height/2, 2*width, 2*height);
 }

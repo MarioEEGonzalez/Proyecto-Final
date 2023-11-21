@@ -17,6 +17,8 @@ public:
     float getx();
     void Detect_colision( );
 
+    QRectF boundingRect() const;
+
 public slots:
     void movetammy();
     void dead();

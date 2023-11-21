@@ -6,6 +6,9 @@ ammunition::ammunition(QString name,int x, int y ,QString direction)
     posx= x;
     posy = y;
     setPos(posx,posy);
+    height = 40;
+    width = 40;
+
     timer = new QTimer(this);
     A=9;
     Vo= 2;
@@ -40,6 +43,12 @@ void ammunition::setShoot(){
 
     }
 }
+
+QRectF ammunition::boundingRect() const
+{
+    return QRectF(-width/2, -height/2, 2*width, 2*height);
+}
+
 void ammunition::moveup(){
     QTransform rotation;
 
@@ -52,8 +61,8 @@ void ammunition::moveup(){
         setPos(posx,posy);
 
 
-        setPixmap (QPixmap(":/new/prefix1/49.png").scaled(40,40));
-        setPixmap (QPixmap(":/new/prefix1/50.png").scaled(40,40));
+        setPixmap (QPixmap(":/new/prefix1/49.png").scaled(width,height));
+        setPixmap (QPixmap(":/new/prefix1/50.png").scaled(width,height));
         n++;
     }
     else if (dir1 == "left"){
@@ -61,8 +70,8 @@ void ammunition::moveup(){
         setPos(posx,posy);
 
         rotation.rotate(-90);
-        setPixmap ((QPixmap(":/new/prefix1/49.png").scaled(40,40)).transformed(rotation));
-        setPixmap ((QPixmap(":/new/prefix1/50.png").scaled(40,40)).transformed(rotation));
+        setPixmap ((QPixmap(":/new/prefix1/49.png").scaled(width,height)).transformed(rotation));
+        setPixmap ((QPixmap(":/new/prefix1/50.png").scaled(width,height)).transformed(rotation));
         n++;
     }
     else if(dir1 == "down"){
@@ -71,8 +80,8 @@ void ammunition::moveup(){
         setPos(posx,posy);
 
         rotation.rotate(180);
-        setPixmap ((QPixmap(":/new/prefix1/49.png").scaled(40,40)).transformed(rotation));
-        setPixmap ((QPixmap(":/new/prefix1/50.png").scaled(40,40)).transformed(rotation));
+        setPixmap ((QPixmap(":/new/prefix1/49.png").scaled(width,height)).transformed(rotation));
+        setPixmap ((QPixmap(":/new/prefix1/50.png").scaled(width,height)).transformed(rotation));
         n++;
     }
     else if(dir1 == "right"){
@@ -81,8 +90,8 @@ void ammunition::moveup(){
         setPos(posx,posy);
 
         rotation.rotate(90);
-        setPixmap ((QPixmap(":/new/prefix1/49.png").scaled(40,40)).transformed(rotation));
-        setPixmap ((QPixmap(":/new/prefix1/50.png").scaled(40,40)).transformed(rotation));
+        setPixmap ((QPixmap(":/new/prefix1/49.png").scaled(width,height)).transformed(rotation));
+        setPixmap ((QPixmap(":/new/prefix1/50.png").scaled(width,height)).transformed(rotation));
         n++;
     }
 }

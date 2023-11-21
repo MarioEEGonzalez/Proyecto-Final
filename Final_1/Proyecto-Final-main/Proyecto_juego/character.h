@@ -26,6 +26,9 @@ public:
     int count= 0;
     int scale= 5;
 
+    int height;
+    int width;
+
 
 };
 

@@ -26,6 +26,17 @@ MainWindow::MainWindow(QWidget *parent)
     scene1->addItem(enemy1);
 
 
+    /* Detección de colisión Enemigo Bala */
+
+    for (int i = 0; i < balas.size(); i++)
+    {
+        if (balas[i]->collidesWithItem(enemy1,Qt::IntersectsItemBoundingRect))
+        {
+            scene1->removeItem(enemy1);
+            scene1->removeItem(balas.at(i));
+            balas.removeAt(i);
+        }
+    }
 
 
 }
@@ -46,6 +57,7 @@ void MainWindow::keyPressEvent(QKeyEvent *e){
     scene1->addItem(bala);
     balas.append(bala);
 
+    /*
     for (int i = 0; i<balas.length();i++ ){
         if (balas.at(i)->posx >= enemy1->posx && balas.at(i)->posx< enemy1->posx +60 &&balas.at(i)->posy>= enemy1->posy && balas.at(i)->posy< enemy1->posy +60 ){
 
@@ -53,7 +65,11 @@ void MainWindow::keyPressEvent(QKeyEvent *e){
         }
     }
 
+    }*/
+
+
     }
+
     //QObject::connect(bala,SIGNAL(colision()),enemy1,SLOT(dead()));
 
 
