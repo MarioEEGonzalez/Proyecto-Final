@@ -54,15 +54,42 @@ float enemy::getx(){
 }
 
 void enemy::dead(){
-    setPixmap (QPixmap(":/new/prefix1/morty.png").scaled(60,60));
+    scale=1000;
+    count= 0;
+
+    while(count<4*scale ){
+    if(count <1 *scale){
+        setPixmap(QPixmap (":/new/prefix1/kill1.png").scaled(50,50));
+        count++;
+    }
+    else if ((count>=1*scale) && (count< scale*2)){
+        setPixmap(QPixmap (":/new/prefix1/kill2.png").scaled(50,50));
+        count++;
+    }
+    else if ((count>=2*scale) && (count< scale*3)){
+        setPixmap(QPixmap (":/new/prefix1/kill2.png").scaled(50,50));
+        count++;
+    }
+    else if((count>=3*scale) && (count< scale*4)){
+        setPixmap(QPixmap (":/new/prefix1/kill2.png").scaled(50,50));
+        count++;
+
+
+    }
+
+    }
+
+
+
 }
 
-void enemy::Detect_colision( ){
 
-
-}
 
 QRectF enemy::boundingRect() const
 {
     return QRectF(-width/2, -height/2, 2*width, 2*height);
+
 }
+
+
+

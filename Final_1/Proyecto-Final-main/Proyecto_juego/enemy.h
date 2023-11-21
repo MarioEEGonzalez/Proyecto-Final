@@ -11,6 +11,7 @@ public:
     Q_OBJECT
 public:
     enemy(int tipo);
+
     int tipo, damage;
     float posx,posy,speedx,speedy;
     QTimer *timer;
@@ -18,10 +19,10 @@ public:
     void Detect_colision( );
 
     QRectF boundingRect() const;
-
+    void dead();
 public slots:
     void movetammy();
-    void dead();
+
 
 
 };

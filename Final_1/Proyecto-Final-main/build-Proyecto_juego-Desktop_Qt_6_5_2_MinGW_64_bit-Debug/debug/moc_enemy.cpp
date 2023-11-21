@@ -40,16 +40,14 @@ struct qt_meta_stringdata_CLASSenemyENDCLASS_t {};
 static constexpr auto qt_meta_stringdata_CLASSenemyENDCLASS = QtMocHelpers::stringData(
     "enemy",
     "movetammy",
-    "",
-    "dead"
+    ""
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSenemyENDCLASS_t {
-    uint offsetsAndSizes[8];
+    uint offsetsAndSizes[6];
     char stringdata0[6];
     char stringdata1[10];
     char stringdata2[1];
-    char stringdata3[5];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSenemyENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -57,13 +55,11 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSenemyENDCLASS_t qt_meta_stringd
     {
         QT_MOC_LITERAL(0, 5),  // "enemy"
         QT_MOC_LITERAL(6, 9),  // "movetammy"
-        QT_MOC_LITERAL(16, 0),  // ""
-        QT_MOC_LITERAL(17, 4)   // "dead"
+        QT_MOC_LITERAL(16, 0)   // ""
     },
     "enemy",
     "movetammy",
-    "",
-    "dead"
+    ""
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -75,7 +71,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSenemyENDCLASS[] = {
       11,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       1,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -83,11 +79,9 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSenemyENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   26,    2, 0x0a,    1 /* Public */,
-       3,    0,   27,    2, 0x0a,    2 /* Public */,
+       1,    0,   20,    2, 0x0a,    1 /* Public */,
 
  // slots: parameters
-    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -103,8 +97,6 @@ Q_CONSTINIT const QMetaObject enemy::staticMetaObject = { {
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<enemy, std::true_type>,
         // method 'movetammy'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'dead'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -117,7 +109,6 @@ void enemy::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         (void)_t;
         switch (_id) {
         case 0: _t->movetammy(); break;
-        case 1: _t->dead(); break;
         default: ;
         }
     }
@@ -143,13 +134,13 @@ int enemy::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 1)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 1;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 1)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
+        _id -= 1;
     }
     return _id;
 }

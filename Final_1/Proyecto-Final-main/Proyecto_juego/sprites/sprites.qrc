@@ -26,5 +26,7 @@
         <file>morty_up2.png</file>
         <file>morty_up3.png</file>
         <file>tammy_down1.png</file>
+        <file>kill1.png</file>
+        <file>kill2.png</file>
     </qresource>
 </RCC>

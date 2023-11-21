@@ -25,10 +25,13 @@ public:
     ~MainWindow();
     void setLevel1();
     void keyPressEvent(QKeyEvent *e);
-    QTimer *time_bala;
-
-
+    QTimer *timer_colision;
     QList <ammunition*> balas;
+    QList <enemy*> enemigos;
+signals:
+    void colision();
+
+
 private:
     Ui::MainWindow *ui;
 
@@ -38,6 +41,8 @@ private:
     ammunition *bala;
     QString dir;
     enemy *enemy1;
+public slots:
+void colision_enemy_bala();
 
 };
 

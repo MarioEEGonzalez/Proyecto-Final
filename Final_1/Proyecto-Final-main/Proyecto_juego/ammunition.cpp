@@ -94,5 +94,8 @@ void ammunition::moveup(){
         setPixmap ((QPixmap(":/new/prefix1/50.png").scaled(width,height)).transformed(rotation));
         n++;
     }
+    if(posx>500 || posy >500){
+        delete this;
+    }
 }
 

@@ -23,20 +23,16 @@ MainWindow::MainWindow(QWidget *parent)
     scene1->addItem(pers);
     //cracion enemigos
     enemy1= new enemy(char_num);
+    enemigos.push_back(enemy1);
     scene1->addItem(enemy1);
 
+    timer_colision = new QTimer();
+    timer_colision->start(100);
+    connect(timer_colision,SIGNAL(timeout()),this,SLOT(colision_enemy_bala()));
 
-    /* Detección de colisión Enemigo Bala */
 
-    for (int i = 0; i < balas.size(); i++)
-    {
-        if (balas[i]->collidesWithItem(enemy1,Qt::IntersectsItemBoundingRect))
-        {
-            scene1->removeItem(enemy1);
-            scene1->removeItem(balas.at(i));
-            balas.removeAt(i);
-        }
-    }
+
+
 
 
 }
@@ -57,20 +53,9 @@ void MainWindow::keyPressEvent(QKeyEvent *e){
     scene1->addItem(bala);
     balas.append(bala);
 
-    /*
-    for (int i = 0; i<balas.length();i++ ){
-        if (balas.at(i)->posx >= enemy1->posx && balas.at(i)->posx< enemy1->posx +60 &&balas.at(i)->posy>= enemy1->posy && balas.at(i)->posy< enemy1->posy +60 ){
-
-            enemy1->setPixmap (QPixmap(":/new/prefix1/morty_down1.png").scaled(50,50));
-        }
     }
 
-    }*/
 
-
-    }
-
-    //QObject::connect(bala,SIGNAL(colision()),enemy1,SLOT(dead()));
 
 
 
@@ -104,8 +89,25 @@ void MainWindow::keyPressEvent(QKeyEvent *e){
     //obst_collition(e);
 
 
+}
+void MainWindow::colision_enemy_bala(){
+    for (int i = 0; i < balas.size(); i++)
+    {
+        for (int j = 0;j<enemigos.size();j++){
+            if (balas[i]->collidesWithItem(enemigos[j],Qt::IntersectsItemBoundingRect))
+            {
 
+                enemigos.at(j)->timer->stop();
+                enemigos.at(j)->dead();
+                delete enemigos.at(j);
+                scene1->removeItem(balas.at(i));
+                enemigos.removeAt(j);
+                balas.removeAt(i);
 
+                break;
+            }
+        }
+    }
 }
 
 
