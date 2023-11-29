@@ -28,5 +28,14 @@
         <file>tammy_down1.png</file>
         <file>kill1.png</file>
         <file>kill2.png</file>
+        <file>tammy_down2.png</file>
+        <file>tammy_down3.png</file>
+        <file>tammy_up1.png</file>
+        <file>enemy2_down1.png</file>
+        <file>enemy2_up1.png</file>
+        <file>kill3.png</file>
+        <file>kill4.png</file>
+        <file>enemy2_left.png</file>
+        <file>enemy2_right.png</file>
     </qresource>
 </RCC>

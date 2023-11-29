@@ -41,8 +41,11 @@ private:
     ammunition *bala;
     QString dir;
     enemy *enemy1;
+    enemy *enemy2;
+
 public slots:
 void colision_enemy_bala();
+void remove_enemy(int enemi);
 
 };
 

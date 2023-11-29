@@ -21,14 +21,24 @@ MainWindow::MainWindow(QWidget *parent)
 
     pers = new main_character(char_num);//rick 1, morty 0
     scene1->addItem(pers);
-    //cracion enemigos
+
+    //creacion enemigos
     enemy1= new enemy(char_num);
+    enemy2= new enemy(2);
+
+    //añade enemigos a la lista
     enemigos.push_back(enemy1);
+    enemigos.push_back(enemy2);
+
+    // añade enemigos a la escena
     scene1->addItem(enemy1);
+    scene1->addItem(enemy2);
 
     timer_colision = new QTimer();
     timer_colision->start(100);
+
     connect(timer_colision,SIGNAL(timeout()),this,SLOT(colision_enemy_bala()));
+    QObject::connect(enemy1,SIGNAL(delete_tammy(int)),this,SLOT(remove_enemy(int)));
 
 
 
@@ -96,18 +106,48 @@ void MainWindow::colision_enemy_bala(){
         for (int j = 0;j<enemigos.size();j++){
             if (balas[i]->collidesWithItem(enemigos[j],Qt::IntersectsItemBoundingRect))
             {
+                enemigos.at(j)->health = enemigos.at(j)->getHealt() - balas.at(i)->damage;
+                if ( enemigos.at(j)->getHealt() == 0){
+                    enemigos.at(j)->timer->stop();
+                    enemigos.at(j)->dead();
 
-                enemigos.at(j)->timer->stop();
-                enemigos.at(j)->dead();
-                delete enemigos.at(j);
-                scene1->removeItem(balas.at(i));
-                enemigos.removeAt(j);
-                balas.removeAt(i);
+                    scene1->removeItem(balas.at(i));
 
-                break;
+                    enemigos.removeAt(j);
+
+
+                    delete (balas[i]);
+                    balas.removeAt(i);
+                    i--;
+                    break;
+                }
+                else{
+                      scene1->removeItem(balas.at(i));
+                     balas.removeAt(i);
+                    }
+
+
+
             }
         }
     }
+}
+
+void MainWindow::remove_enemy(int enemi)
+{
+    if (enemi == 1){
+    scene1->removeItem(enemy1);
+    }
+    /*
+    else if (enemi == 2){
+        scene1->removeItem(enemy2);
+
+    }
+    else if (enemi == 3){
+        scene1->removeItem(enemy1);
+    }
+*/
+
 }
 
 

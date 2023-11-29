@@ -2,7 +2,7 @@
 #define ENEMY_H
 #include "character.h"
 #include <QTimer>
-
+#include <cmath>
 #include <QList>
 
 class enemy:  public character
@@ -13,15 +13,36 @@ public:
     enemy(int tipo);
 
     int tipo, damage;
+    //tamy movimeinto rebota con los limites
     float posx,posy,speedx,speedy;
+    //ticket please movimiento circular
+    int  centerX ;
+    int  centerY ;
+    int  radius ;
+    float  omega;
+    float T,k,n;
+
+    // timers tammy
     QTimer *timer;
+    QTimer *timer_dead_tammy;
+
+    //timer tickets plese
+    QTimer *timer_tickets;
+    QTimer *timer_dead_tickets;
+
     float getx();
-    void Detect_colision( );
+
+    void dead();
 
     QRectF boundingRect() const;
-    void dead();
+
+
+signals:
+    void delete_tammy(int tipo);
 public slots:
     void movetammy();
+    void deadtammy();
+    void movetickets();
 
 
 
