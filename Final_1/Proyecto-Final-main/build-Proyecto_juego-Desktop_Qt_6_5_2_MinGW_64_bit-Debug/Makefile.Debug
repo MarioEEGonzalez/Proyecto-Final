@@ -128,8 +128,6 @@ debug/qrc_sprites.cpp: ../Proyecto_juego/sprites/sprites.qrc \
 		../Proyecto_juego/sprites/48.png \
 		../Proyecto_juego/sprites/rick_left2.png \
 		../Proyecto_juego/sprites/morty_left1.png \
-		../Proyecto_juego/sprites/enemy2_up1.png \
-		../Proyecto_juego/sprites/enemy2_left.png \
 		../Proyecto_juego/sprites/kill1.png \
 		../Proyecto_juego/sprites/rick_left4.png \
 		../Proyecto_juego/sprites/rick.png \
@@ -139,17 +137,12 @@ debug/qrc_sprites.cpp: ../Proyecto_juego/sprites/sprites.qrc \
 		../Proyecto_juego/sprites/FONDO1.png \
 		../Proyecto_juego/sprites/morty_left3.png \
 		../Proyecto_juego/sprites/rick_up3.png \
-		../Proyecto_juego/sprites/kill3.png \
 		../Proyecto_juego/sprites/rick_left3.png \
 		../Proyecto_juego/sprites/morty_up1.png \
 		../Proyecto_juego/sprites/rick3.png \
 		../Proyecto_juego/sprites/rick2.png \
-		../Proyecto_juego/sprites/enemy2_right.png \
 		../Proyecto_juego/sprites/morty_down3.png \
-		../Proyecto_juego/sprites/kill4.png \
 		../Proyecto_juego/sprites/kill2.png \
-		../Proyecto_juego/sprites/tammy_up1.png \
-		../Proyecto_juego/sprites/enemy2_down1.png \
 		../Proyecto_juego/sprites/rick_up1.png \
 		../Proyecto_juego/sprites/rick_left1.png \
 		../Proyecto_juego/sprites/morty_down1.png \
@@ -158,8 +151,6 @@ debug/qrc_sprites.cpp: ../Proyecto_juego/sprites/sprites.qrc \
 		../Proyecto_juego/sprites/morty_down2.png \
 		../Proyecto_juego/sprites/morty_left2.png \
 		../Proyecto_juego/sprites/tammy_down1.png \
-		../Proyecto_juego/sprites/tammy_down2.png \
-		../Proyecto_juego/sprites/tammy_down3.png \
 		../Proyecto_juego/sprites/50.png
 	D:\VARIOO\QtCreator\6.5.2\mingw_64\bin\rcc.exe -name sprites --no-zstd ..\Proyecto_juego\sprites\sprites.qrc -o debug\qrc_sprites.cpp
 
@@ -1641,37 +1632,7 @@ debug/mainwindow.o: ../Proyecto_juego/mainwindow.cpp ../Proyecto_juego/mainwindo
 		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/QEventLoop \
 		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qeventloop.h \
 		../Proyecto_juego/enemy.h \
-		ui_mainwindow.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/QVariant \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtWidgets/QApplication \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtWidgets/qapplication.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qcoreapplication.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qcoreapplication_platform.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qfuture.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qfutureinterface.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qmutex.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qtsan_impl.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qresultstore.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qfuture_impl.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qthreadpool.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qthread.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qdeadlinetimer.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qelapsedtimer.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qrunnable.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qexception.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qpromise.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtGui/qguiapplication.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtGui/qinputmethod.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtCore/qlocale.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtGui/qguiapplication_platform.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtWidgets/QGraphicsView \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtWidgets/qgraphicsview.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtGui/qpainter.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtGui/qtextoption.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtWidgets/qscrollarea.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtWidgets/qframe.h \
-		D:/VARIOO/QtCreator/6.5.2/mingw_64/include/QtWidgets/QWidget
+		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\Proyecto_juego\mainwindow.cpp
 
 debug/qrc_sprites.o: debug/qrc_sprites.cpp 

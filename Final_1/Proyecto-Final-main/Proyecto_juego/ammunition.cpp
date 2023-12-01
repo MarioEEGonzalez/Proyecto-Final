@@ -8,7 +8,6 @@ ammunition::ammunition(QString name,int x, int y ,QString direction)
     setPos(posx,posy);
     height = 40;
     width = 40;
-    damage= 20;
 
     timer = new QTimer(this);
     A=9;
@@ -95,6 +94,8 @@ void ammunition::moveup(){
         setPixmap ((QPixmap(":/new/prefix1/50.png").scaled(width,height)).transformed(rotation));
         n++;
     }
-
+    if(posx>500 || posy >500){
+        delete this;
+    }
 }
 
