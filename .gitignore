@@ -1,2 +1,5 @@
 
 Final_1/Proyecto-Final-main/build-Proyecto_juego-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/debug/Proyecto_juego.exe
+*.Debug
+*.Release
+Final_1/Proyecto-Final-main/build-Proyecto_juego-Desktop_Qt_6_5_2_MinGW_64_bit-Debug/Makefile
